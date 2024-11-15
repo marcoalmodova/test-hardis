@@ -81,6 +81,3 @@ jobs:
         run: |
           echo "Creating scratch org, pushing the metadata and resting"
           sf hardis:auth:login --devhub
-          sf hardis:scratch:create
-          - sf hardis:auth:login --scratchorg
-          - sf hardis:org:test:apex
