@@ -1,0 +1,8 @@
+projectName: testHardis
+devHubAlias: DevHub_testHardis
+developmentBranch: integration
+autoCleanTypes:
+  - destructivechanges
+  - flowPositions
+  - minimizeProfiles
+devHubUsername: marco.almodova@appsolutely.nl
