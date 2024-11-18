@@ -81,5 +81,5 @@ jobs:
         run: |
           echo "Creating scratch org, pushing the metadata and resting"
           sf hardis:auth:login --devhub
-          SCRATCH_ORG_ALIAS=ci sf hardis:scratch:create
+          sf hardis:scratch:create
           sf hardis:org:test:apex
