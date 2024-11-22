@@ -79,7 +79,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           FORCE_COLOR: "1"
         run: |
-          echo "Creating scratch org, pushing the metadata and resting"
+          echo "Creating scratch org, pushing the metadata and testing"
           sf hardis:auth:login --devhub
           sf hardis:scratch:create
           sf hardis:org:test:apex
