@@ -79,7 +79,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           FORCE_COLOR: "1"
         run: |
-          echo "Creating scratch org, pushing the metadata and testing"
+          echo "Creating scratch org, pushing the metadata and testing..."
           sf hardis:auth:login --devhub
           echo y|sf plugins install texei-sfdx-plugin
           sf hardis:scratch:create
