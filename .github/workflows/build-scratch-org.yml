@@ -59,6 +59,8 @@ jobs:
           SFDX_CLIENT_KEY_PREPROD: ${{ secrets.SFDX_CLIENT_KEY_PREPROD}}
           SFDX_CLIENT_ID_MAIN: ${{ secrets.SFDX_CLIENT_ID_MAIN}}
           SFDX_CLIENT_KEY_MAIN: ${{ secrets.SFDX_CLIENT_KEY_MAIN}}
+          SFDX_CLIENT_ID_DEVHUB_TESTHARDIS: ${{ secrets.SFDX_CLIENT_ID_DEVHUB_TESTHARDIS}}
+          SFDX_CLIENT_KEY_DEVHUB_TESTHARDIS: ${{ secrets.SFDX_CLIENT_KEY_DEVHUB_TESTHARDIS}}
           SFDX_DEPLOY_WAIT_MINUTES: 120 # Override if necessary
           SFDX_TEST_WAIT_MINUTES: 120 # Override if necessary
           CI_COMMIT_REF_NAME: ${{ github.event.pull_request.base.ref }} # Defines the target branch of the PR
@@ -76,9 +78,9 @@ jobs:
           JIRA_TICKET_REGEX: ${{ secrets.JIRA_TICKET_REGEX }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           FORCE_COLOR: "1"
+          USER_EMAIL: "marco@marco.com"
         run: |
-          echo "Creating scratch org, pushing the metadata and resting"
+          echo "Creating scratch org, pushing the metadata and testing..."
           sf hardis:auth:login --devhub
           sf hardis:scratch:create
-          - sf hardis:auth:login --scratchorg
-          - sf hardis:org:test:apex
+          sf hardis:org:test:apex
